@@ -43,7 +43,6 @@ function ecfwp_register_my_cpts() {
     ];
     register_post_type( 'formation', $args);
 
-
     /**
      * Post Type: etudiants.
      */
@@ -72,4 +71,8 @@ add_action( 'init', 'ecfwp_register_my_cpts' );
 if( function_exists('acf_add_options_page') ) {
     acf_add_options_page();
 }
+
+/* Création de tailles d'images personnalisées */
+add_image_size('formation-medium', 740, 310, true);
+add_image_size('formation-full', 1480, 620, true);
 
