@@ -6,7 +6,7 @@ add_theme_support( 'title-tag' );
 /* Chargement des feuilles de style et des scripts */
 function ecfwp_enqueue_style_and_scripts(){
     wp_enqueue_style('base', get_stylesheet_directory_uri().'/css/base.css', [], '1.0');
-    wp_enqueue_style('main', get_stylesheet_directory_uri().'/css/style.css', ['base'], '1.0');
+    wp_enqueue_style('main', get_stylesheet_directory_uri().'/css/style.css', ['base'], '1.1');
     wp_enqueue_script('nav', get_stylesheet_directory_uri().'.js/nav.js', [], '1.0', true );
 }
 add_action('wp_enqueue_scripts','ecfwp_enqueue_style_and_scripts');

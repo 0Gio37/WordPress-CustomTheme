@@ -18,9 +18,13 @@
                             <?php echo wp_get_attachment_image( $imageModule, 'formation-full' ); ?>
                         </picture>
                         <div class="card-content">
-                            <h2 class="card-title">
-                                <?php the_title(); ?> - <?php the_field('module_duree'); ?> heures
-                            </h2>
+                            <?php
+                            $hours = get_field('module_duree');
+                            if($hours){?>
+                                <h2 class="card-title"><?php the_title() ?> - <?php echo $hours ?> heures</h2>
+                                <?php }else {?>
+                                <h2 class="card-title"><?php the_title() ?></h2>
+                            <?php } ?>
                             <p class="card-excerpt">
                                 <?php
                                 $string = get_field("module_contenu");
@@ -32,6 +36,38 @@
                     </article>
                 <?php } ?>
             <?php } ?>
+
+<!--            <nav class="pagination">-->
+                <?php echo get_the_posts_pagination([
+                        'prev_text'          => '<<',
+                        'next_text'          => '>>',
+                    'type' => 'list',
+                                                    ]); ?>
+<!--                <ul class="pagination-list">-->
+<!--                    <li class="pagination-item">-->
+<!--                        <a href="#" class="pagination-link" aria-label="Précédent">-->
+<!--                            <span aria-hidden="true">&laquo;</span>-->
+<!--                            <span class="screen-reader-text">Précédent</span>-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li class="pagination-item current">-->
+<!--                        <a href="#" class="pagination-link">1</a>-->
+<!--                    </li>-->
+<!--                    <li class="pagination-item">-->
+<!--                        <a href="#" class="pagination-link">2</a>-->
+<!--                    </li>-->
+<!--                    <li class="pagination-item">-->
+<!--                        <a href="#" class="pagination-link">3</a>-->
+<!--                    </li>-->
+<!--                    <li class="pagination-item">-->
+<!--                        <a href="#" class="pagination-link" aria-label="Suivant">-->
+<!--                            <span aria-hidden="true">&raquo;</span>-->
+<!--                            <span class="screen-reader-text">Suivant</span>-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                </ul>
+            </nav>-->
+
         </div>
     </main>
 

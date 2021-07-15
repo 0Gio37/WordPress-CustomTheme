@@ -3,8 +3,8 @@
             <address>
                 <strong><?php the_field('titre_formation', 'option'); ?></strong><br>
                 <?php the_field('adresse_nom', 'option'); ?><br>
-                <?php the_field('adresse_cp', 'option'); ?><br>
-                <?php the_field('adresse_ville', 'option'); ?> <?php the_field('adresse_formation', 'option'); ?><br>
+                <?php the_field('adresse_rue', 'option'); ?><br>
+                <?php the_field('adresse_cp', 'option'); ?> <?php the_field('adresse_ville', 'option'); ?><br>
                 T : <a href="tel:<?php the_field('adresse_telephone', 'option'); ?>"><?php the_field('adresse_telephone', 'option'); ?></a>
             </address>
             <?php wp_nav_menu([
