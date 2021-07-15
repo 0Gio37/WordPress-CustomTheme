@@ -1,27 +1,21 @@
 <?php get_header();?>
 
-<h1>page single formation</h1>
-
-
-<h3>Titre :
-    <?php the_title(); ?>:</h3>
-<h3>Contenu  :
-    <?php the_field('module_description'); ?>
-
-
 <main id="main-content" class="post">
-    <section class="module-hero">
+    <?php
+    $imgID = get_field('module_image');
+    $imgSize = "formation-full";
+    $imgArr = wp_get_attachment_image_src( $imgID, $imgSize );
+    ?>
+    <section class="module-hero" style="background-image: url(<?php echo $imgArr[0]; ?> );">
         <div class="container">
-            <h1>Module HTML/CSS</h1>
+            <h1><?php the_title(); ?></h1>
         </div>
     </section>
     <section class="module-desc">
         <div class="container container-narrow">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut placerat orci nulla. Tincidunt ornare massa eget egestas purus viverra accumsan in nisl. Tempor id eu nisl nunc mi ipsum faucibus. Fusce id velit ut tortor pretium. Massa ultricies mi quis hendrerit dolor magna eget. Nullam eget felis eget nunc lobortis. Faucibus ornare suspendisse sed nisi. Sagittis eu volutpat odio facilisis mauris sit amet massa. Erat velit scelerisque in dictum non consectetur a erat. Amet nulla facilisi morbi tempus iaculis urna. Egestas</p>
+            <p><?php the_field('module_contenu'); ?></p>
         </div>
     </section>
 </main>
-
-
 
 <?php get_footer();?>

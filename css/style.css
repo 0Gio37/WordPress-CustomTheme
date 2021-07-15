@@ -195,11 +195,6 @@ body:not(.home):not(.formation-simple) main {
     row-gap: 2rem;
 }
 
-main{
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}
-
 .main-footer .container {
     display: grid;
     align-items: center;
