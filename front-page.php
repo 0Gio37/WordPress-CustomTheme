@@ -9,7 +9,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title"><?php the_field('accueil_titre_principal'); ?></h1>
-                <a href="etudiant-liste.html" class="hero-link"><?php the_field('accueil_titre_secondaire'); ?></a>
+                <a href="<?php bloginfo('url'); ?>/etudiants/" class="hero-link"><?php the_field('accueil_titre_secondaire'); ?></a>
             </div>
         </div>
     </section>
@@ -119,15 +119,6 @@
             <?php }}
             wp_reset_postdata();
             ?>
-<!--            <article class="card">-->
-<!--                <img loading="lazy"  src="img/formation-2.jpg" alt="A coloured keyboard" class="card-img" srcset="img/formation-2.jpg,-->
-<!--					img/formation-2_2x.jpg 2x">-->
-<!--                <div class="card-content">-->
-<!--                    <h2 class="card-title">Module JavaScript</h2>-->
-<!--                    <p class="card-excerpt">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, …</p>-->
-<!--                </div>-->
-<!--                <a href="formation-simple.html" class="card-link">Lire la suite <img loading="lazy"  src="img/icon-arrow-right.svg" alt="" aria-hidden="true"></a>-->
-<!--            </article>-->
         </div>
     </section>
 </main>

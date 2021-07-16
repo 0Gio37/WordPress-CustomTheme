@@ -36,37 +36,11 @@
                     </article>
                 <?php }}?>
 
-<!--            <nav class="pagination">-->
             <?php echo get_the_posts_pagination([
                     'prev_text'         => '<<',
                     'next_text'         => '>>',
                     'type'              => 'list',]);
             ?>
-<!--                <ul class="pagination-list">-->
-<!--                    <li class="pagination-item">-->
-<!--                        <a href="#" class="pagination-link" aria-label="Précédent">-->
-<!--                            <span aria-hidden="true">&laquo;</span>-->
-<!--                            <span class="screen-reader-text">Précédent</span>-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li class="pagination-item current">-->
-<!--                        <a href="#" class="pagination-link">1</a>-->
-<!--                    </li>-->
-<!--                    <li class="pagination-item">-->
-<!--                        <a href="#" class="pagination-link">2</a>-->
-<!--                    </li>-->
-<!--                    <li class="pagination-item">-->
-<!--                        <a href="#" class="pagination-link">3</a>-->
-<!--                    </li>-->
-<!--                    <li class="pagination-item">-->
-<!--                        <a href="#" class="pagination-link" aria-label="Suivant">-->
-<!--                            <span aria-hidden="true">&raquo;</span>-->
-<!--                            <span class="screen-reader-text">Suivant</span>-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                </ul>
-            </nav>-->
-
         </div>
     </main>
 

@@ -81,3 +81,11 @@ add_image_size('formation-regular', 440, 400, true);
 add_image_size('news-small', 544, 393, true);
 add_image_size('news-big', 1088, 725, true);
 
+/* personnalisation du nombre de post sur la page archive des étudiants*/
+function custom_posts_per_page($query) {
+    if (is_post_type_archive('etudiants')) {
+        $query->set('posts_per_page', 8);
+    }
+}
+add_action('pre_get_posts', 'custom_posts_per_page');
+
