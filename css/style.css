@@ -390,8 +390,13 @@ body:not(.home):not(.formation-simple) main {
 
 /* Homepage */
 
+/*main{*/
+/*    padding-top: 4rem;*/
+/*    padding-bottom: 4rem;*/
+/*}*/
+
 .home-hero {
-    background-image: url(../img/hero-background.jpg);
+    /*background-image: url(../img/hero-background.jpg);*/
     background-size: cover;
     background-position: center;
 }
@@ -589,7 +594,7 @@ body:not(.home):not(.formation-simple) main {
     align-items: center;
     min-height: 40rem;
     color: #fff;
-    background-image: url(../img/formation-1.jpg);
+    /*background-image: url(../img/formation-1.jpg);*/
     background-size: cover;
     background-position: center;
 }

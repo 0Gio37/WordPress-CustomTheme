@@ -12,10 +12,10 @@
                 while(have_posts() ){
                     the_post(); ?>
                     <article class="card">
-                        <picture class="card-img">
-                            <?php $imageModule = get_field('module_image'); ?>
-                            <source media="(max-width: 480px)" srcset='<?php echo wp_get_attachment_image_url($imageModule,'formation-medium' ); ?>'>
-                            <?php echo wp_get_attachment_image( $imageModule, 'formation-full' ); ?>
+                        <picture>
+                            <?php $imgID = get_field('module_image'); ?>
+                            <source media="(max-width: 480px)" srcset='<?php echo wp_get_attachment_image_url($imgID,'formation-medium' ); ?>'>
+                            <?php echo wp_get_attachment_image( $imgID, 'formation-full',false, ['loading' => 'lazy', 'class'=>'card-img','alt'=>'image de présentation la formation'] ); ?>
                         </picture>
                         <div class="card-content">
                             <?php

@@ -3,10 +3,9 @@
 <main id="main-content" class="post">
     <?php
     $imgID = get_field('module_image');
-    $imgSize = "formation-full";
-    $imgArr = wp_get_attachment_image_src( $imgID, $imgSize );
+    $imgArr = wp_get_attachment_image_src( $imgID, 'formation-full' );
     ?>
-    <section class="module-hero" style="background-image: url(<?php echo $imgArr[0]; ?> );">
+    <section class="module-hero" style="background-image: url(<?php echo $imgArr[0]; ?> )">
         <div class="container">
             <h1><?php the_title(); ?></h1>
         </div>

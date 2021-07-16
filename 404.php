@@ -1,7 +1,7 @@
-<?php get_header();?>
+<?php get_header('error404');?>
 
-    <h1 class="error-404">Erreur lors du chargement de cette page</h1>
+    <a href="<?php echo home_url();?>">
+        <h2 style="text-align: center; margin-top: 50px">Retour à la page d'accueil</h2>
+    </a>
 
-    <a href="#"><p>Retour à la page d'accueil</p>
 
-<?php get_footer();?>

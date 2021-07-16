@@ -73,6 +73,11 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 /* Création de tailles d'images personnalisées */
+add_image_size('home-full', 2000, 800, true);
 add_image_size('formation-medium', 740, 310, true);
 add_image_size('formation-full', 1480, 620, true);
+add_image_size('etudiant-small', 220, 220, true);
+add_image_size('formation-regular', 440, 400, true);
+add_image_size('news-small', 544, 393, true);
+add_image_size('news-big', 1088, 725, true);
 
