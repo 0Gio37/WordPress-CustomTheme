@@ -1,6 +1,6 @@
 <?php get_header();?>
 
-    <main id="main-content" class="modules">
+    <main id="main-content" class="modules main-padd">
         <div class="container container-narrow">
             <h1 class="modules-title"><?php the_field('page_formation_titre', 'option'); ?></h1>
             <div class="module-desc">
@@ -34,15 +34,14 @@
                         </div>
                         <a href="<?php the_permalink(); ?>" class="card-link">Lire la suite <img loading="lazy"  src="<?php echo get_stylesheet_directory_uri();?>/img/icon-arrow-right.svg" alt="" aria-hidden="true"></a>
                     </article>
-                <?php } ?>
-            <?php } ?>
+                <?php }}?>
 
 <!--            <nav class="pagination">-->
-                <?php echo get_the_posts_pagination([
-                        'prev_text'          => '<<',
-                        'next_text'          => '>>',
-                    'type' => 'list',
-                                                    ]); ?>
+            <?php echo get_the_posts_pagination([
+                    'prev_text'         => '<<',
+                    'next_text'         => '>>',
+                    'type'              => 'list',]);
+            ?>
 <!--                <ul class="pagination-list">-->
 <!--                    <li class="pagination-item">-->
 <!--                        <a href="#" class="pagination-link" aria-label="Précédent">-->

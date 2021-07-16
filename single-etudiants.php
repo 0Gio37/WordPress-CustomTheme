@@ -1,6 +1,6 @@
 <?php get_header();?>
 
-<main id="main-content" class="student-post">
+<main id="main-content" class="student-post main-padd">
     <div class="container">
             <?php $imgID = get_field('etudiant_photo'); ?>
             <?php echo wp_get_attachment_image( $imgID, 'etudiant-regular', false, ['class' => 'student-post-img', 'loading' => 'lazy', 'alt'=>'<?php the_title(); ?>'] ); ?>

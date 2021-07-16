@@ -119,7 +119,7 @@ a {
     transition: .3s;
 }
 
-section,
+.main-padd, section,
 body:not(.home):not(.formation-simple) main {
     padding-top: 4rem;
     padding-bottom: 4rem;

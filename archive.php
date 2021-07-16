@@ -1,6 +1,6 @@
 <?php get_header();?>
 
-    <main id="main-content" class="last-news">
+    <main id="main-content" class="last-news main-padd">
         <div class="container">
             <h1 class="section-title"><?php the_field('actualites_titre', 'option'); ?></h1>
             <?php if (have_posts() ) {
@@ -26,8 +26,13 @@
                         </div>
                         <a href="<?php the_permalink(); ?>" class="card-link">Lire la suite <img loading="lazy"  src="<?php echo get_stylesheet_directory_uri();?>/img/icon-arrow-right.svg" alt="" aria-hidden="true"></a>
                     </article>
-                <?php } ?>
-            <?php } ?>
+                <?php }} ?>
+
+            <?php echo get_the_posts_pagination([
+                    'prev_text'         => '<<',
+                    'next_text'         => '>>',
+                    'type'              => 'list',]);
+            ?>
         </div>
     </main>
 

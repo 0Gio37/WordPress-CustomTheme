@@ -1,6 +1,6 @@
 <?php get_header();?>
 
-    <main id="main-content" class="students">
+    <main id="main-content" class="students main-padd">
         <div class="container">
             <h1 class="section-title"><?php the_field('page_etudiant_titre', 'option'); ?></h1>
                 <?php if (have_posts() ) {
@@ -15,8 +15,13 @@
                         <h2 class="student-name"><?php the_title() ?></h2>
                         <a href="<?php the_permalink(); ?>" class="student-link">En savoir plus</a>
                     </article>
-                <?php } ?>
-            <?php } ?>
+                <?php }} ?>
+
+            <?php echo get_the_posts_pagination([
+                    'prev_text'         => '<<',
+                    'next_text'         => '>>',
+                    'type'              => 'list']);
+            ?>
         </div>
     </main>
 
