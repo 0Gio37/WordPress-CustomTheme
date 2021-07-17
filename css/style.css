@@ -754,9 +754,14 @@ form p:nth-child(6){
 input.wpcf7-submit {
     /*margin-left: auto;*/
     /*justify-self: flex-end;*/
+    width: auto;
+    /*padding-top: 1rem;*/
+    /*padding-bottom: 1rem;*/
+    /*text-align: end;*/
+    margin-left: auto;
     font-style: normal;
     display: flex;
-    padding: 0rem 3rem;
+    padding: 1rem 3rem;
     border: 0;
     color: #fff;
     background-color: var(--secondary);
@@ -786,9 +791,36 @@ input.wpcf7-submit:hover{
 
 .post-date::before {
     display: flex;
-    content: url('../img/icon-date.svg');
+    /*content: url('../img/icon-date.svg');*/
     margin-right: 0.8rem;
 }
+
+.social-nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+    font: 0/0 a;
+    color: #fff;
+    border: 0;
+    text-shadow: none;
+    /*background-image: url(../img/icon-facebook.svg);*/
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.social-nav a[href*='facebook.com'] {
+    background-image: url(../img/icon-facebook.svg);
+}
+.social-nav a[href*='twitter.com'] {
+    background-image: url(../img/icon-twitter.svg);
+}
+.social-nav a[href*='linkedin.com'] {
+    background-image: url(../img/icon-linkedin.svg);
+}
+
 
 /* Responsive */
 
@@ -865,9 +897,9 @@ input.wpcf7-submit:hover{
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .module-hero {
-        background-image: url(../img/formation-1_2x.jpg);
-    }
+    /*.module-hero {*/
+    /*    background-image: url(../img/formation-1_2x.jpg);*/
+    /*}*/
 }
 
 @media (min-width: 64em) {
